@@ -1,0 +1,64 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRMFinal"
+        xmlns:Properties="clr-namespace:CRMFinal.Properties" x:Class="CRMFinal.CRMain"
+        mc:Ignorable="d"
+        Title="CRMain" Height="673.701" Width="1233.629" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60"/>
+
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="118"/>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="118*"/>
+                <ColumnDefinition Width="130*"/>
+                <ColumnDefinition Width="129*"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="60"/>
+                <ColumnDefinition Width="20"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5"/>
+                <RowDefinition Height="60"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <DockPanel Grid.Row="1"  Background="#FF173835" Grid.ColumnSpan="13" HorizontalAlignment="Left" Width="1226" />
+
+            <DockPanel Grid.Row="0"  Background="#FF10D6A0" Grid.ColumnSpan="13" />
+
+            <Button Name="btnLeads" Grid.Row="1" Grid.Column="2" Content="Leads" Height="Auto" Background="#FF173835" FontSize="14" FontFamily="Raleway SemiBold" BorderBrush="#FF173835" Click="BtnLeads_Click"/>
+            <Button Name="btnContacts" Grid.Row="1" Grid.Column="3" Content="Contacts" Height="Auto" Background="#FF173835" FontSize="14" FontFamily="Raleway SemiBold" BorderBrush="#FF173835" Click="BtnContacts_Click" />
+            <Button Name="btnDeals" Grid.Row="1" Grid.Column="4" Content="Deals" Height="Auto" Background="#FF173835" FontFamily="Raleway SemiBold" FontSize="14" BorderBrush="#FF173835"  Click="BtnDeals_Click"/>
+            <Button Grid.Row="1" Grid.Column="5" Content="Activities" Height="Auto" Background="#FF173835" FontFamily="Raleway SemiBold" FontSize="14" BorderBrush="#FF173835" />
+            <Button Grid.Row="1" Grid.Column="1" Content="Home" Height="Auto" Background="#FF173835" FontSize="14" FontFamily="Raleway SemiBold" BorderBrush="#FF173835" />
+            <Image Grid.Row="1" Grid.Column="9" Source="Images\calendar.png" Margin="10,10,10,12" />
+            <Image Grid.Row="1" Grid.Column="8" Source="Images\search.png" Margin="10,10,10,12" />
+            <Image Grid.Row="1" Grid.Column="10" Source="Images\notification.png" Margin="10,10,10,12" />
+            <Image Grid.Row="1" Grid.Column="11" Source="Images\userman.png" Margin="10,10,10,12"  />
+            <ToggleButton Grid.Row="1" Grid.Column="9" IsEnabled="True" Click="ToggleButton_Click"  x:Name="toggleButton" Opacity="0.05"/>
+
+
+
+
+            
+            <local:Deals Grid.ColumnSpan="13" HorizontalAlignment="Left" Height="578" Grid.Row="2" VerticalAlignment="Top" Width="1226"  x:Name="Deals1" />
+            <local:Contacts HorizontalAlignment="Left" Height="578" Grid.Row="2" VerticalAlignment="Top" Width="1226" Grid.ColumnSpan="13"  x:Name="Contacts1"/>
+            <local:Lead  HorizontalAlignment="Left" Height="578" Grid.Row="2" VerticalAlignment="Top" Width="1226" Grid.ColumnSpan="13" x:Name="Leads1" />
+            
+            <Calendar Name="date"  Grid.Column="7" Margin="116,57,10,229" Foreground="#DD000000" Visibility="Hidden" Grid.ColumnSpan="6" Grid.Row="1" Grid.RowSpan="2"  />
+
+        </Grid>
+
+
+
+    </Grid>
+</Window>

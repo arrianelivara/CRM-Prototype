@@ -1,0 +1,16 @@
+﻿<Window x:Class="CRMFinal.SignupPopUp"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRMFinal"
+        mc:Ignorable="d"
+        Title="Welcome New Zogo User!" Height="151.872" Width="348.036" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    <Grid Margin="0,0,-8,-21">
+
+
+        <Button  Name="Exit" Content="Login" Margin="108,77,107,52" Height="Auto" Click="Exit_Click"/>
+        <TextBlock  Text="Registration Successful! Login to Continue."  FontFamily="Raleway SemiBold" TextAlignment="Center" Margin="0,44,0,79" FontSize="14"/>
+
+    </Grid>
+</Window>

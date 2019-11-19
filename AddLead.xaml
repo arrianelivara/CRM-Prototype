@@ -1,0 +1,78 @@
+﻿<Window x:Class="CRMFinal.AddLead"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CRMFinal"
+        mc:Ignorable="d"
+        Title="AddLead" Height="450" Width="800" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen" ShowInTaskbar="False"  Foreground="#FFF0F0F0"
+        BorderBrush="Black"
+        >
+
+
+    <Grid Background="White">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="30"/>
+            <ColumnDefinition Width="*"/>
+
+            <ColumnDefinition Width="40"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="10"/>
+            <!-- 4 - Lead Info -->
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="9"/>
+            <!-- 6 - Lead Owner -->
+            <RowDefinition Height="41"/>
+            <!--  7 -->
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Image Grid.Column="1" Grid.Row="1" Source="Images\leaddd.png" Margin="0,0,283,0" />
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Create Lead" FontSize="22" FontFamily="Raleway SemiBold" Margin="58,16,0,0" Foreground="#FF1FC7BF"  />
+        <TextBlock Grid.Row="3" Grid.Column="1" Text="Lead Information" FontSize="18" FontFamily="Raleway SemiBold" Margin="0,22,0,0" Foreground="#FF615F5F" />
+        <TextBlock Grid.Row="5" Text="Lead Owner" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="1" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnLeadOwner" Grid.Row="5" Grid.Column="1" Margin="115,0,0,0"  SelectionBrush="Black" Background="White" FontSize="16" Foreground="#FF2B2B2B" />
+
+        <TextBlock Grid.Row="6" Text="First Name" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="1" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnFirstName" Grid.Row="6" Grid.Column="1" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="7" Text="Last Name" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="1" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnLastName" Grid.Row="7" Grid.Column="1" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="8" Text="Company" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="1" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnCompany" Grid.Row="8" Grid.Column="1" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="9" Text="Job Title" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="1" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnJobTitle" Grid.Row="9" Grid.Column="1" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+
+        <!-- 2nd Column -->
+        <TextBlock Grid.Row="5" Text="Industry" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="3" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnIndustry" Grid.Row="5" Grid.Column="3" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="6" Text="Email" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="3" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnEmail" Grid.Row="6" Grid.Column="3" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="7" Text="Contact No." FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="3" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnContactNo" Grid.Row="7" Grid.Column="3" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="8" Text="Address" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="3" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnAddress" Grid.Row="8" Grid.Column="3" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <TextBlock Grid.Row="9" Text="Lead Status" FontSize="16" FontFamily="Raleway SemiBold"   Grid.Column="3" Margin="10,20,0,0" Foreground="#FF494949" />
+        <TextBox Name="btnLeadStatus" Grid.Row="9" Grid.Column="3" Margin="115,0,0,0" CaretBrush="#FF13DC81" SelectionBrush="#FF00D7B0" Foreground="#FF474747" FontSize="16" />
+
+        <Button Click="CloseLead_Click" Grid.Row="10" Grid.Column="3" Content="Cancel" Margin="76,34,151,36" Background="#FF424242" BorderBrush="#FFECECEC" />
+        <Button Click="BtnSave_Click" Name="btnSave" Grid.Row="10" Grid.Column="3" Content="Save" Margin="214,34,10,36" Background="#FF00D7B0" BorderBrush="#FFF1ECF9" />
+        <Button Click="CloseLead_Click" Name="CloseLead" Content="X" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="30" FontSize="12"/>
+    </Grid>
+</Window>
