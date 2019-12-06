@@ -31,7 +31,7 @@ namespace CRMFinal
                 
                 
                 cnn.Open();
-                string query = ("Select * from tblUserAccounts where Username= '" + LgnUsername.Text + "' and Password='" + LgnPassword.Text + "'");
+                string query = ("Select * from tblUserAccounts where Username= '" + LgnUsername.Text + "' and Password='" + LgnPassword.Password + "'");
                 SqlDataAdapter da = new SqlDataAdapter(query, cnn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -86,7 +86,7 @@ namespace CRMFinal
             }
             catch (Exception)
             {
-                MessageBox.Show("Not Connected.");
+               
             }
         }
 

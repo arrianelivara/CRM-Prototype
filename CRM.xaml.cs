@@ -43,25 +43,55 @@ namespace CRMFinal
         private void BtnLeads_Click(object sender, RoutedEventArgs e)
         {
             int zOrder = Panel.GetZIndex(Contacts1) + 1;
+            int zOrder0 = Panel.GetZIndex(Activities1) + 1;
+            int zOrder1 = Panel.GetZIndex(Home1) + 1;
             int zOrder2 = Panel.GetZIndex(Deals1) + 1;
-            Panel.SetZIndex(Leads1, zOrder2);
+            int zOrder3 = zOrder + zOrder0 + zOrder1 + zOrder2;
+            Panel.SetZIndex(Leads1, zOrder3);
+            
             
         }
 
         private void BtnContacts_Click(object sender, RoutedEventArgs e)
         {
             int zOrder = Panel.GetZIndex(Leads1) + 1;
+            int zOrder0 = Panel.GetZIndex(Activities1) + 1;
+            int zOrder1 = Panel.GetZIndex(Home1) + 1;
             int zOrder2 = Panel.GetZIndex(Deals1) + 1;
-            Panel.SetZIndex(Contacts1, zOrder2);
+            int zOrder3 = zOrder + zOrder0 + zOrder1 + zOrder2;
+            Panel.SetZIndex(Contacts1, zOrder3);
+             
         }
 
         private void BtnDeals_Click(object sender, RoutedEventArgs e)
         {
             int zOrder = Panel.GetZIndex(Leads1) + 1;
+            int zOrder0 = Panel.GetZIndex(Activities1) + 1;
+            int zOrder1 = Panel.GetZIndex(Home1) + 1;
             int zOrder2 = Panel.GetZIndex(Contacts1) + 1;
-            Panel.SetZIndex(Deals1, zOrder2);
+            int zOrder3 = zOrder + zOrder0 + zOrder1 + zOrder2;
+            Panel.SetZIndex(Deals1, zOrder3);
+             
         }
 
-       
-}
+        private void BtnHome_Click(object sender, RoutedEventArgs e)
+        {
+            int zOrder = Panel.GetZIndex(Leads1) + 1;
+            int zOrder0 = Panel.GetZIndex(Activities1) + 1;
+            int zOrder1 = Panel.GetZIndex(Deals1) + 1;
+            int zOrder2 = Panel.GetZIndex(Contacts1) + 1;
+            int zOrder3 = zOrder + zOrder0 + zOrder1 + zOrder2 ;
+            Panel.SetZIndex(Home1, zOrder3);
+        }
+
+        private void BtnActivities_Click(object sender, RoutedEventArgs e)
+        {
+            int zOrder = Panel.GetZIndex(Leads1) + 1;
+            int zOrder0 = Panel.GetZIndex(Home1) + 1;
+            int zOrder1 = Panel.GetZIndex(Deals1) + 1;
+            int zOrder2 = Panel.GetZIndex(Contacts1) + 1;
+            int zOrder3 = zOrder + zOrder0 + zOrder1 + zOrder2;
+            Panel.SetZIndex(Activities1, zOrder3);
+        }
+    }
 }

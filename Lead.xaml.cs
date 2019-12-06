@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -48,7 +49,6 @@ namespace CRMFinal
             try
             {
                 cnn.Open();
-                MessageBox.Show("Connected");
                 string query= ("Select FirstName,CompanyName,JobTitle,Email,ContactNo, Address, LeadStatus, UserName from tblLead");
                 SqlCommand com = new SqlCommand(query,cnn);
                 da = new SqlDataAdapter(com);
@@ -73,6 +73,13 @@ namespace CRMFinal
         private void LeadsDtGd_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
             da.Update(dt);
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var delete = new Delete(); //create your new form.
+            delete.Show(); //show the new form.
+
         }
     }
 }

@@ -35,13 +35,14 @@ namespace CRMFinal
 
             try
             {
-                cnn.Open();
-                MessageBox.Show("Connected");
+               cnn.Open();
                com.CommandText = ("INSERT INTO tblLead (Username, FirstName, LastName, CompanyName, JobTitle, Industry, Email, ContactNo, Address, LeadStatus) " +
                     "VALUES ('" + btnLeadOwner.Text + "','" + btnFirstName.Text + "' , '" + btnLastName.Text + "' , '" + btnCompany.Text + "', " +
                     "'" + btnJobTitle.Text + "','" + btnIndustry.Text + "','" + btnEmail.Text + "','" + btnContactNo.Text + "','" + btnAddress.Text + "','" + btnLeadStatus.Text + "');");
                 //SqlDataAdapter da = new SqlDataAdapter(query, cnn);
                 com.ExecuteNonQuery();
+                var newForm = new Success(); //create your new form.
+                newForm.Show(); //show the new form.
                 cnn.Close();
             }
             catch (Exception ex)

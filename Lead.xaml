@@ -20,7 +20,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="5"/>
-            
+
             <RowDefinition Height="10"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
@@ -28,25 +28,45 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
 
-        <TextBlock Text="All Leads" Grid.Column="1" Grid.Row="2" FontSize="24" FontFamily="Raleway SemiBold" Margin="0,19,0,0"/>
+        <TextBlock Text="Leads" Grid.Column="1" Grid.Row="2" FontSize="22" FontFamily="Raleway SemiBold" Margin="0,19,0,0"/>
 
         <DataGrid MouseDoubleClick="LeadsDtGd_MouseDoubleClick" ItemsSource="{Binding}" AutoGenerateColumns="False" Loaded="LeadsDtGd_Loaded" Name="LeadsDtGd" Grid.Row="3" Grid.Column="1" FontFamily="Raleway SemiBold" FontSize="12" Grid.ColumnSpan="7" BorderThickness="1" BorderBrush="#FF9B9B9B" GridLinesVisibility="Horizontal" VerticalGridLinesBrush="#FF323232" HeadersVisibility="Column" AlternatingRowBackground="#FFE4E4E4" Background="White"  >
             <DataGrid.Columns>
-
                 <DataGridCheckBoxColumn Header="All" Width="70"></DataGridCheckBoxColumn>
                 <DataGridTextColumn x:Name="LeadName"  Header="LEAD NAME" Width="150" Binding="{Binding FirstName}" ></DataGridTextColumn>
                 <DataGridTextColumn x:Name="LeadStatus" Header="LEAD STATUS" Width="120" Binding="{Binding LeadStatus}"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="CompanyName" Header="COMPANY" Width="100" Binding="{Binding CompanyName}"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="JobTitle" Header="JOB TITLE" Width="100" Binding="{Binding JobTitle}"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="Email" Header="EMAIL" Width="150" Binding="{Binding Email}"></DataGridTextColumn>
-                <DataGridTextColumn x:Name="ContactNo" Header="CONTACT NO" Width="110" Binding="{Binding ContactNo}"></DataGridTextColumn>
+                <DataGridHyperlinkColumn x:Name="ContactNo" Header="CONTACT NO" Width="110" Binding="{Binding ContactNo}"></DataGridHyperlinkColumn>
                 <DataGridTextColumn x:Name="Adress" Header="ADDRESS" Width="150" Binding="{Binding Address}"></DataGridTextColumn>
                 <DataGridTextColumn x:Name="LeadOwner" Header="LEAD OWNER" Binding="{Binding UserName}"></DataGridTextColumn>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Content="CONVERT" Grid.Column="3" Grid.Row="2" Height="Auto" Margin="2,10,0,10"/>
-        <Button Click="BtnAddLead_Click" Name="BtnAddLead" Content="ADD" Grid.Column="5" Grid.Row="2" Height="Auto" Margin="0,10"/>
-        <Button Content="DELETE" Grid.Column="7" Grid.Row="2" Height="Auto" Margin="0,10"/>
-        <ComboBox Grid.Row="2" Grid.Column="1" Margin="122,14,0,12" Height="34" BorderThickness="0,0,0,1"/>
+        <Button Content="CONVERT" Grid.Column="2" Grid.Row="2" Height="Auto" Margin="264.816,10,10,10" Background="#FFF9813D" BorderBrush="{x:Null}"/>
+        <Button Click="BtnAddLead_Click" Name="BtnAddLead" Content="ADD" Grid.Column="3" Grid.Row="2" Height="Auto" Margin="0,10"/>
+        <Button Name="btnDelete" Click="BtnDelete_Click"  Content="DELETE" Grid.Column="5" Grid.Row="2" Height="Auto" Margin="0,10" Background="#FFFF3E3E" BorderBrush="{x:Null}"/>
+        <ComboBox Grid.Row="2" Grid.Column="1" Margin="122,14,0,12" Height="34" BorderThickness="0,0,0,1">
+            <ComboBoxItem
+                 IsSelected="True">
+                All Leads
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Converted Leads
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Junk Leads
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Mailing Leads
+            </ComboBoxItem>
+            <ComboBoxItem>
+                Today's Leads
+            </ComboBoxItem>
+        </ComboBox>
+        <Button Content="PRINT" Grid.Column="7" Grid.Row="2" Height="Auto" Margin="0,10" Background="#FF62F154" BorderBrush="{x:Null}"/>
+
+
+
     </Grid>
 </UserControl>

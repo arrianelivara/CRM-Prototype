@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,7 +52,6 @@ namespace CRMFinal
             try
             {
                 cnn.Open();
-                MessageBox.Show("Connected");
                 string query = ("Select FirstName,AccountName,CompanyName,JobTitle,Email,ContactNo, Address,Industry,ContactOwner, Email from tblContacts");
                 SqlCommand com = new SqlCommand(query, cnn);
                 da = new SqlDataAdapter(com);
@@ -59,9 +59,6 @@ namespace CRMFinal
                 dt = new DataTable("tblContacts");
                 da.Fill(dt);
                 ContactDgd.ItemsSource = dt.DefaultView;
-
-
-
                 cnn.Close();
             }
             catch (Exception ex)
@@ -69,6 +66,13 @@ namespace CRMFinal
 
                 MessageBox.Show(ex.ToString());
             }
+        }
+
+        private void BtnDelete_Click(object sender, RoutedEventArgs e)
+        {
+            var delete = new Delete(); //create your new form.
+            delete.Show(); //show the new form.
+            
         }
     }
 }

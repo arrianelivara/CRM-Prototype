@@ -4,7 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:CRMFinal"
-             mc:Ignorable="d" Height="174.34" Width="300.732" Background="WhiteSmoke" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+             BorderBrush="Gray" BorderThickness="1" mc:Ignorable="d" Height="174.34" Width="300.732" Background="WhiteSmoke" WindowStyle="None" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     <Grid>
 
         <Image Source="images/checked.png" Margin="115,33,117,71" />
